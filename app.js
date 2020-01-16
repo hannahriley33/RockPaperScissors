@@ -32,9 +32,10 @@ let gamesTied = 0;
 // reset button event handler
 
 resetButton.addEventListener('click', () => {
-    gamesWon = 0;
-    gamesLost = 0;
-    gamesTied = 0;
+    console.log('resetbuttonworks');
+    gamesWonDisplay.textContent = 0;
+    gamesLostDisplay.textContent = 0;
+    gamesTiedDisplay.textContent = 0;
     youPlayed.classList.add('hidden');
     
 });
