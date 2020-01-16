@@ -45,7 +45,7 @@ playButton.addEventListener('click', () => {
     const checkedRadio = document.querySelector('input:checked');
     let userSelected = checkedRadio.value;
     let computerSelected = getRandomThrow();
- 
+    let whoWon = checkResult();
     
     // make what user played show up on screen
    
@@ -57,7 +57,14 @@ playButton.addEventListener('click', () => {
      console.log(getRandomThrow());
      console.log(computerSelected);
      computerPlayed.textContent = computerSelected;
-  
+
+     // compare user answer and computer answer
+    console.log(checkResult());
+    console.log(whoWon);
+    declareWinner.textContent = whoWon;
+    // make games won show up on dom
+    
+
     
 
 
