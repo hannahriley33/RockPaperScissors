@@ -40,21 +40,24 @@ resetButton.addEventListener('click', () => {
     
 //eventListener for play button
 playButton.addEventListener('click', () => {
-    console.log('buttonworks');
+    //console.log('buttonworks');
     // get values
     const checkedRadio = document.querySelector('input:checked');
     let userSelected = checkedRadio.value;
-    let computerSelected = getRandomThrow.value;
+    let computerSelected = getRandomThrow();
  
-    // make what you played show up on screen
-   console.log(checkedRadio.value);
+    
+    // make what user played show up on screen
+   
+    //console.log(checkedRadio.value);
    youPlayed.textContent = userSelected;
-   console.log(youPlayed.textContent);
+   //console.log(youPlayed.textContent);
 
     // make what computer played show up on screen
      console.log(getRandomThrow());
-    getRandomThrow.value = computerSelected;
-    console.log(computerSelected);
+     console.log(computerSelected);
+     computerPlayed.textContent = computerSelected;
+  
     
 
 
