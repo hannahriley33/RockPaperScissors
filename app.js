@@ -11,10 +11,10 @@ const declareWinner = document.getElementById('declare-winner');
 const resetButton = document.getElementById('reset-button');
 let youPlayed = document.querySelector('#you-played');
 let computerPlayed = document.getElementById('computer-played');
-let gamesWon = document.getElementById('games-won');
-let gamesLost = document.getElementById('games-lost');
-let gamesTied = document.getElementById('games-tied');
+let gamesWonDisplay = document.getElementById('games-won');
+let gamesLostDisplay = document.getElementById('games-lost');
 let gamesTiedDisplay = document.getElementById('games-tied');
+
 
 // const theyPlayedPaper = document.getElementById('paper');
 // const theyPlayedRock = document.getElementById('rock');
@@ -22,9 +22,9 @@ let gamesTiedDisplay = document.getElementById('games-tied');
 
 // initialize state
 
-gamesWon.textContent = 0;
-gamesLost.textContent = 0;
-gamesTied.textContent = 0;
+let gamesWon = 0;
+let gamesLost = 0;
+let gamesTied = 0;
 
 
 // user interaction
@@ -66,15 +66,17 @@ playButton.addEventListener('click', () => {
     // tally scores
     if (whoWon === 'you tied') {
         gamesTied++;
-        gamesTiedDisplay.textContent = gamesTied
+        gamesTiedDisplay.textContent = gamesTied;
     }
 
     if (whoWon === 'you lose') {
         gamesLost++;
+        gamesLostDisplay.textContent = gamesLost;
     }
     
     if (whoWon === 'you win') {
         gamesWon++;
+        gamesWonDisplay.textContent = gamesWon;
     }
 
 
