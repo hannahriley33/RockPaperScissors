@@ -14,6 +14,7 @@ let computerPlayed = document.getElementById('computer-played');
 let gamesWon = document.getElementById('games-won');
 let gamesLost = document.getElementById('games-lost');
 let gamesTied = document.getElementById('games-tied');
+let gamesTiedDisplay = document.getElementById('games-tied');
 
 // const theyPlayedPaper = document.getElementById('paper');
 // const theyPlayedRock = document.getElementById('rock');
@@ -21,9 +22,9 @@ let gamesTied = document.getElementById('games-tied');
 
 // initialize state
 
-gamesWon.value = 0;
-gamesLost.value = 0;
-gamesTied.value = 0;
+gamesWon.textContent = 0;
+gamesLost.textContent = 0;
+gamesTied.textContent = 0;
 
 
 // user interaction
@@ -45,24 +46,38 @@ playButton.addEventListener('click', () => {
     const checkedRadio = document.querySelector('input:checked');
     let userSelected = checkedRadio.value;
     let computerSelected = getRandomThrow();
-    let whoWon = checkResult();
+    let whoWon = checkResult(userSelected, computerSelected);
+    console.log(whoWon);
     
     // make what user played show up on screen
    
-    //console.log(checkedRadio.value);
+    
    youPlayed.textContent = userSelected;
-   //console.log(youPlayed.textContent);
+   
 
     // make what computer played show up on screen
-     console.log(getRandomThrow());
-     console.log(computerSelected);
+     
      computerPlayed.textContent = computerSelected;
-
-     // compare user answer and computer answer
-    console.log(checkResult());
-    console.log(whoWon);
+   
+    // make won show up on dom
+     
     declareWinner.textContent = whoWon;
-    // make games won show up on dom
+
+    // tally scores
+    if (whoWon === 'you tied') {
+        gamesTied++;
+        gamesTiedDisplay.textContent = gamesTied
+    }
+
+    if (whoWon === 'you lose') {
+        gamesLost++;
+    }
+    
+    if (whoWon === 'you win') {
+        gamesWon++;
+    }
+
+
     
 
     
@@ -70,15 +85,7 @@ playButton.addEventListener('click', () => {
 
 
    
-    // if {
-    //     youPlayed.value = computerPlayed
-    //     return 'you tied';
+ 
     
     
 });
-
-
-// getRandomThrow();
-
-
-// checkResult();
