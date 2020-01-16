@@ -2,43 +2,73 @@
 
 
 import getRandomThrow from "/get-random-throw.js";
-import {checkResult} from "/get-random-throw.js";
+import checkResult from "/check-result.js";
 
 // get DOM elements
 
-const rockButton = document.getElementById('rock');
-const paperButton = document.getElementById('paper');
-const scissorsButton = document.getElementById('scissors');
 const playButton = document.getElementById('play-button');
 const declareWinner = document.getElementById('declare-winner');
 const resetButton = document.getElementById('reset-button');
+let youPlayed = document.querySelector('#you-played');
+let computerPlayed = document.getElementById('computer-played');
+let gamesWon = document.getElementById('games-won');
+let gamesLost = document.getElementById('games-lost');
+let gamesTied = document.getElementById('games-tied');
+
+// const theyPlayedPaper = document.getElementById('paper');
+// const theyPlayedRock = document.getElementById('rock');
+// const theyPlayedScissors = document.getElementById('scissors');
 
 // initialize state
-let gameCount= 0;
-let gameWins = 0;
-let gameLosses = 0;
-let gameTies = 0;
+
+gamesWon.value = 0;
+gamesLost.value = 0;
+gamesTied.value = 0;
+
 
 // user interaction
 
 // reset button event handler
 
 resetButton.addEventListener('click', () => {
-    let (gameCount === 0);
-    let (gameWins === 0);
-    let (gameLosses === 0);
-    let (gameTies === 0);
+    gamesWon = 0;
+    gamesLost = 0;
+    gamesTied = 0;
+    youPlayed.classList.add('hidden');
+    
+});
+    
+//eventListener for play button
+playButton.addEventListener('click', () => {
+    console.log('buttonworks');
+    // get values
+    const checkedRadio = document.querySelector('input:checked');
+    let userSelected = checkedRadio.value;
+    let computerSelected = getRandomThrow.value;
+ 
+    // make what you played show up on screen
+   console.log(checkedRadio.value);
+   youPlayed.textContent = userSelected;
+   console.log(youPlayed.textContent);
+
+    // make what computer played show up on screen
+     console.log(getRandomThrow());
+    getRandomThrow.value = computerSelected;
+    console.log(computerSelected);
+    
+
+
+
+   
+    // if {
+    //     youPlayed.value = computerPlayed
+    //     return 'you tied';
+    
     
 });
 
 
+// getRandomThrow();
 
 
-
-
-
-
-
-
-
-getRandomThrow();
+// checkResult();

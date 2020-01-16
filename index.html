@@ -40,21 +40,26 @@
             <span>Scissors</span>
         </label>
         <br>
+        <br>
         <button id="play-button">click to play!</button>
 
         <br>
         
-        <p>You played:</p>
-        <p>Computer played:</p>
+        <p>You played:
+            <span id="you-played"></span>
+        </p>
+        <p>Computer played:
+            <span id="computer-played"></span>
+        </p>
 
         <br>
 
         <p id="declare-winner"></p>
 
 
-        <p>Games won:<span id="games-won"></span></p>
-        <p>Games lost:</p><span id="games-lost"></span>
-        <p>Games tied:</p><span id="games-tied"></span>
+        <p>Games won:<span id="games-won">0</span></p>
+        <p>Games lost:<span id="games-lost">0</span></p>
+        <p>Games tied:<span id="games-tied">0</span></p>
 
         <br>
 
@@ -69,6 +74,7 @@
 
 
     <script type="module" src="app.js"></script>
+    <script type="module" src="check-result.js"></script>
 </body>
 
 </html>
