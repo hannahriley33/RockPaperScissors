@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors Game</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rock Paper Scissors Game!</h1>
+
+    </header>
+   
+    <main>
+        <p id="instructions">Instructions: Pick an option and click submit to see if you won!</p>
+        <p class="rules">Paper beats rock</p>
+        <p class="rules">Rock beats scissors</p>
+        <p class="rules">Scissors beats paper</p>
+
+        <label>
+            <input id="rock" type="radio" name="rps" value="rock">
+            <img src="https://cdn3.iconfinder.com/data/icons/cartoon-hand-gestures/100/c-67-512.png" height="200px" width="200px">
+            <span>Rock</span>
+        </label>
+        <br>
+        <label>
+            <input id="paper" type="radio" name="rps" value="paper">
+            <img src="https://www.pinclipart.com/picdir/middle/130-1304786_paper-computer-icons-drawing-download-cartoon-hand-holding.png" height="200px" width="200px">
+            <span>Paper</span>
+        </label>
+        <br>
+        <label>
+            <input id="scissors" type="radio" name="rps" value="scissors">
+            <img src="https://banner2.cleanpng.com/20180530/ova/kisspng-computer-icons-scissors-hand-hand-scissors-5b0e7567487ea6.029050951527674215297.jpg" height="200px" width="200px">
+            <span>Scissors</span>
+        </label>
+        <br>
+        <br>
+        <button id="play-button">click to play!</button>
+
+        <br>
+        
+        <p>You played:
+            <span id="you-played"></span>
+        </p>
+        <p>Computer played:
+            <span id="computer-played"></span>
+        </p>
+
+        
+        <br>
+
+        <p id="declare-winner"></p>
+
+        <br>
+
+        <p>Gamess won:<span id="games-won"></span></p>
+        <p>Games lost:<span id="games-lost"></span></p>
+        <p>Games tied:<span id="games-tied"></span></p>
+
+        <br>
+
+        
+
+        <button id="reset-button">Reset game</button>
+
+    </main>
+
+
+    
+
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="check-result.js"></script>
+</body>
+
+</html>
