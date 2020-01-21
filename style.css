@@ -1,14 +1,21 @@
 * {
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
-    /* background-image: url('https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252__340.jpg');
-} */
+    background-color: red;
+    align-content: center;
+    text-align: center;
+}
 
-#instructions {
+#instructions{
     font-size: 20px;
 }
 
 .rules {
     font-size: 16px;
 }
-
+.images{
+    border-radius: 35%;
+    background-image: none;
+    height: 75px;
+    width: 100px;
+}
