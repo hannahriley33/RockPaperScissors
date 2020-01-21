@@ -7,7 +7,7 @@
 export default function getRandomThrow() {
     
     
-    const theCorrectAnswer = Math.floor(Math.random()*3);
+    const theCorrectAnswer = Math.floor(Math.random() * 3);
 
 
     if (theCorrectAnswer === 0) {
@@ -19,6 +19,6 @@ export default function getRandomThrow() {
     }
     return 'scissors';
 
-};
+}
 
  
