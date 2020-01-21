@@ -27,6 +27,8 @@ let gamesLost = 0;
 let gamesTied = 0;
 
 
+
+
 // user interaction
 
 // reset button event handler
@@ -79,16 +81,12 @@ playButton.addEventListener('click', () => {
         gamesWon++;
         gamesWonDisplay.textContent = gamesWon;
     }
-
-
-    
-
-    
-
-
-
-   
- 
     
     
 });
+
+
+
+    
+
+
