@@ -4,7 +4,7 @@ export default function checkResult(player, computer)  {
     
     if (player === computer) {
         return 'you tied'
-    }
+    };
 
     if (player === 'rock' && computer === 'paper') {
         return 'you lose'
